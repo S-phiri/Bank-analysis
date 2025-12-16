@@ -1,0 +1,60 @@
+-- analysis_queries.sql
+-- Exploratory analysis on retail bank customers
+
+-- 1. Distribution of account types
+SELECT account_type,
+       COUNT(*) AS num_customers
+FROM bank_customers
+GROUP BY account_type
+ORDER BY num_customers DESC;
+
+-- 2. Average balance by account type
+SELECT account_type,
+       AVG(balance) AS avg_balance
+FROM bank_customers
+GROUP BY account_type
+ORDER BY avg_balance DESC;
+
+-- 3. Churn rate by branch
+SELECT branch,
+       AVG(churned) * 100 AS churn_rate_pct,
+       COUNT(*) AS num_customers
+FROM bank_customers
+GROUP BY branch
+ORDER BY churn_rate_pct DESC;
+
+-- 4. Income bands vs churn
+SELECT
+    CASE
+        WHEN income < 5000 THEN 'Low (<5k)'
+        WHEN income BETWEEN 5000 AND 15000 THEN 'Middle (5k–15k)'
+        ELSE 'High (>15k)'
+    END AS income_band,
+    COUNT(*) AS num_customers,
+    AVG(churned) * 100 AS churn_rate_pct
+FROM bank_customers
+GROUP BY income_band
+ORDER BY churn_rate_pct DESC;
+
+-- 5. Tenure vs average balance
+SELECT
+    CASE
+        WHEN tenure_years < 1 THEN 'New (<1y)'
+        WHEN tenure_years BETWEEN 1 AND 3 THEN '1–3 years'
+        WHEN tenure_years BETWEEN 3 AND 5 THEN '3–5 years'
+        ELSE '5+ years'
+    END AS tenure_group,
+    COUNT(*) AS num_customers,
+    AVG(balance) AS avg_balance
+FROM bank_customers
+GROUP BY tenure_group
+ORDER BY avg_balance DESC;
+
+-- 6. Top 5 highest balance customers (could be used for VIP segmenting)
+SELECT customer_id,
+       branch,
+       account_type,
+       balance
+FROM bank_customers
+ORDER BY balance DESC
+LIMIT 5;
