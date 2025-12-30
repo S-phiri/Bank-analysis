@@ -1,0 +1,3 @@
+customer_id,branch,account_type,age,income,balance,tenure_years,churned
+6,Lusaka,Business,52,32000.0,150000.0,8.0,0
+3,Kitwe,Business,41,22000.0,84200.75,5.5,1

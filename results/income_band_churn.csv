@@ -1,0 +1,4 @@
+income_band,num_customers,churned_customers,churn_rate_pct,avg_income
+Low (<5k),1,1,100.0,4800.0
+Middle (5k???15k),5,2,40.0,10140.0
+High (>15k),4,1,25.0,22750.0

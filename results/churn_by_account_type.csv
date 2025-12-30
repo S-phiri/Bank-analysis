@@ -1,0 +1,4 @@
+account_type,num_customers,churned_customers,churn_rate_pct
+Current,4,2,50.0
+Business,2,1,50.0
+Savings,4,1,25.0

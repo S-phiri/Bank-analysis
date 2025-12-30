@@ -1,0 +1,6 @@
+branch,num_customers,churned_customers,churn_rate_pct
+Livingstone,1,1,100.0
+Chipata,1,1,100.0
+Ndola,2,1,50.0
+Kitwe,2,1,50.0
+Lusaka,4,0,0.0

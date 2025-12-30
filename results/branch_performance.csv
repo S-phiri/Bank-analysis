@@ -1,0 +1,6 @@
+branch,num_customers,churn_rate_pct,avg_balance,total_balance,balance_per_customer
+Livingstone,1,100.0,9800.25,9800.25,9800.25
+Chipata,1,100.0,7000.0,7000.0,7000.0
+Ndola,2,50.0,8000.0,16000.0,8000.0
+Kitwe,2,50.0,54600.375,109200.75,54600.38
+Lusaka,4,0.0,39225.25,156901.0,39225.25

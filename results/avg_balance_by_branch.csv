@@ -1,0 +1,6 @@
+branch,num_customers,avg_balance,total_balance,min_balance,max_balance
+Kitwe,2,54600.375,109200.75,25000.0,84200.75
+Lusaka,4,39225.25,156901.0,1200.0,150000.0
+Livingstone,1,9800.25,9800.25,9800.25,9800.25
+Ndola,2,8000.0,16000.0,600.0,15400.0
+Chipata,1,7000.0,7000.0,7000.0,7000.0
